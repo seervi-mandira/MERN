@@ -42,6 +42,7 @@ import CountUp from 'react-countup';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaCheckCircle } from 'react-icons/fa';
+import Homeimage  from '../assets/Homeimage.png';
 
 const Home = () => {
   useEffect(() => {
@@ -51,7 +52,12 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="home-container">
+      <div className="home-container" style={{
+        backgroundImage: `url(${Homeimage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh',
+      }}>
         <div className="home-text" data-aos="fade-right">
           <h1>Smart Web Solutions for Smart Businesses</h1>
           <p>Accelerate your growth with expert IT services</p>
@@ -62,19 +68,19 @@ const Home = () => {
       {/* Stats Section */}
       <div className="stats-section" data-aos="fade-up">
         <div className="stat-box">
-          <h2><CountUp end={50} duration={2} />+</h2>
+          <h2><CountUp end={50} duration={5} />+</h2>
           <p>Companies Served</p>
         </div>
         <div className="stat-box">
-          <h2><CountUp end={500} duration={2} />+</h2>
+          <h2><CountUp end={500} duration={5} />+</h2>
           <p>Projects Delivered</p>
         </div>
         <div className="stat-box">
-          <h2><CountUp end={500} duration={2} />+</h2>
+          <h2><CountUp end={500} duration={5} />+</h2>
           <p>Expert Developers</p>
         </div>
         <div className="stat-box">
-          <h2><CountUp end={24} duration={2} />/7</h2>
+          <h2><CountUp end={24} duration={5} />/7</h2>
           <p>Support Available</p>
         </div>
       </div>
@@ -86,7 +92,6 @@ const Home = () => {
           {/* <img src="https://www.agarwalgupta.in/AgarwalGuptlmages/BlogImage/benefits-of-choosing-a-ca-firm-nearby-l.jpg" alt="Why Choose Us" /> */}
 
           <img src="https://img.freepik.com/free-photo/team-working-together-project_23-2149325422.jpg" alt="Why Choose Us" />
-
         </div>
 
         {/* Right Content */}

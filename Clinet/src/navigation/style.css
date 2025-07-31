@@ -1,10 +1,13 @@
-.home-container {
-  background-color: #1B515E;
-  color: white;
-  padding: 80px 60px;
-  text-align: left;
-}
 
+.home-container {
+  background-image: url('/assets/Home.png'); /* your image path */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .home-text h1 {
   font-size: 48px;
 }

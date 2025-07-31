@@ -134,7 +134,7 @@ function UpdateUser() {
   // Fetch the user data based on ID
   const fetchUserData = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/admin/update/${id}`, {
+      const response = await fetch(`https://mern-y1sz.onrender.com/admin/update/${id}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -176,7 +176,7 @@ function UpdateUser() {
 const handleupdateuser = async (e) => {
   e.preventDefault();
   try {
-    const response = await fetch(`http://localhost:5000/admin/user/update/${id}`, {
+    const response = await fetch(`https://mern-y1sz.onrender.com/admin/user/update/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

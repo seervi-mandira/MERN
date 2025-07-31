@@ -96,7 +96,7 @@ function Adminusers() {
  const { token } = useauth();
   const getusedata = async () => {
     try {
-      const response = await fetch('http://localhost:5000/admin/user', {
+      const response = await fetch('https://mern-y1sz.onrender.com/admin/user', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -117,7 +117,7 @@ function Adminusers() {
 
   const deleteid = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/admin/delete/${id}`, {
+      const response = await fetch(`https://mern-y1sz.onrender.com/admin/delete/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'

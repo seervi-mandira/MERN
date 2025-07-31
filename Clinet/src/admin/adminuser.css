@@ -68,6 +68,91 @@ button {
 }
 .admin-title{
   color: #338275;
-  margin-left: 12px;
+  margin-left: 32px;
    font-size: 28px;
+}
+
+
+.admin-header {
+  display: flex;
+  justify-content: space-between; /* Or use flex-start or center based on need */
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 12px;
+}
+
+.admin-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.create-button {
+
+  background-color:  #ABCD9E;
+  color: #1B515E;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 170px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  height: 100vh;
+  top: 0;
+  overflow-y: auto;
+}
+
+.admin-content {
+  flex: 1;
+  overflow-y: auto;
+}
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+
+/* Content beside sidebar */
+.admin-content {
+  flex: 1;
+  padding: 0;      /* 🚫 Remove default spacing */
+  margin: 0;       /* 🚫 No margins */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Yellow section that holds service cards */
+.admin-service-container {
+  padding: 16px;
+  margin: 0;         /* 🚫 No negative margin */
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+/* Optional: fix .row spacing if needed */
+.admin-service-container .row {
+  margin-left: 0;
+  margin-right: 0;
 }

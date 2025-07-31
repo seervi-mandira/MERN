@@ -8,21 +8,21 @@ import React, { useState } from "react";
 import './register.css';
 import { toast } from "react-toastify";
 const Contacts = () =>{
-             const [user, setuser] = useState('');
+             const [username, setusername] = useState('');
 const[email, setemail] = useState('');
 const[message, setmessage] = useState('');
 
 const handleform = async(e) =>{
 e.preventDefault();
-console.log({user, email, message})
+console.log({username, email, message})
 
 
-const response = await fetch('http://localhost:5000/contact',{
+const response = await fetch('https://mern-y1sz.onrender.com/admins/contacts',{
   method:'post', 
   headers:{
     'Content-Type':'application/json'
     
-  }, body: JSON.stringify({user, message, email})
+  }, body: JSON.stringify({username, message, email})
 })
 
 console.log(response);
@@ -58,11 +58,11 @@ toast.error('unable to send the message')
              <form onSubmit={handleform}>
                           <div className="form-data">
                                                                               <label htmlFor="username">UserName</label>
-                                                                              <input type="srting" name="username" placeholder="Enter your name " required value={user} onChange={(e) => setuser(e.target.value)}/>
+                                                                              <input type="text" name="username" placeholder="Enter your name " required value={username} onChange={(e) => setusername(e.target.value)}/>
                                                                  </div>
                                                                  <div className="form-data">
                                                                               <label htmlFor="email">Email</label>
-                                                                              <input type="srting" name="email" placeholder="Enter your email " required value={email} onChange={(e) => setemail(e.target.value)}/>
+                                                                              <input type="email" name="email" placeholder="Enter your email " required value={email} onChange={(e) => setemail(e.target.value)}/>
                                                                  </div>
                                                                 
                                                                   

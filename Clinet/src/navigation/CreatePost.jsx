@@ -66,7 +66,7 @@ function CreatePost() {
   const handlepost = async (e) => {
     e.preventDefault(); // prevent page refresh
     try {
-      const response = await fetch('http://localhost:5000/service', {
+      const response = await fetch('https://mern-y1sz.onrender.com/service', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

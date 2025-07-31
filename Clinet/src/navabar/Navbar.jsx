@@ -25,12 +25,13 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 import './navbar.css';
 import { useauth } from "../authcontext/Usercontext";
+import LOGO from "../assets/LOGO.png"
 const Navbar = () => {
   const {isloggedin} =useauth();
   return (
     <div className="navbar-container">
       <div className="logo-header">
-        <img src="./src/assets/LOGO.png" alt="logo" width={50} height={50} />
+        <img src={LOGO} alt="logo" width={50} height={50} />
         <header>Logiflow</header>
       </div>
 

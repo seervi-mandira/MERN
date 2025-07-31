@@ -56,7 +56,7 @@ const Footer = () => {
         <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="footer-link">
           <FaWhatsapp className="footer-icon" /> WhatsApp
         </a>
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="footer-link">
+        <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" className="footer-link">
           <FaLinkedin className="footer-icon" /> LinkedIn
         </a>
         <a href="tel:+919999999999" className="footer-link">

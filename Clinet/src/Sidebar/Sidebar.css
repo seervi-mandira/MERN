@@ -2,9 +2,11 @@
   width: 200px;
   height: 100vh;
   background-color: #ABCD9E;
-  color: white;
+  color: #1B515E;
   padding: 20px;
   position: fixed;
+  font-weight: bold;
+  font-size: 16px;
   top: 0;
   left: 0;
 }
@@ -27,8 +29,7 @@
 
 .nav-link {
   text-decoration: none;
-  color:#1B515E
-;
+  color:#1B515E;
 font-weight: bold;
   font-size: 16px;
   transition: all 0.2s;
@@ -39,9 +40,4 @@ font-weight: bold;
   color: #1B515E;
 }
 
-.nav-link:hover {
-  color: 
-#1B515E
-;
-  padding-left: 8px;
-}
+

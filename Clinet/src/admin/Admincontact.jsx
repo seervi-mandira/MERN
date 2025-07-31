@@ -93,7 +93,7 @@ function Admincontact() {
   // Fetch all contacts
   const contactdata = async () => {
     try {
-      const response = await fetch('http://localhost:5000/admins/contact', {
+      const response = await fetch('https://mern-y1sz.onrender.com/admins/contact', {
         method: 'GET',
       });
 
@@ -114,7 +114,7 @@ function Admincontact() {
   const Deletedata = async (id) => {
   console.log("Deleting ID:", id); // Log the ID passed
   try {
-    const response = await fetch(`http://localhost:5000/admins/delete/${id}`, {
+    const response = await fetch(`https://mern-y1sz.onrender.com/admins/delete/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

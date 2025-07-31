@@ -83,7 +83,7 @@ const { storetokenInLS } = useauth();
     console.log({ user, email, phone, password });
 
     try {
-      const response = await fetch("http://localhost:5000/userregister", { 
+      const response = await fetch("https://mern-y1sz.onrender.com/userregister", { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -6,6 +6,9 @@ import '../navigation/register.css';
  import './adminuser.css';
  import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
+import { MdAdd } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
+
 const AdminService = () => {
    const [data, setData] = useState([]);
 
@@ -14,7 +17,7 @@ const AdminService = () => {
     const fetchData = async () => {
    
    try {
-     const response  = await fetch('http://localhost:5000/allservices', {
+     const response  = await fetch('https://mern-y1sz.onrender.com/allservices', {
       method:'GET', 
       headers:{
               'Content-Type':'application/json' 
@@ -34,7 +37,7 @@ const AdminService = () => {
 
 const handleDeleteService = async (id) => {
   try {
-    const response = await fetch(`http://localhost:5000/delete/${id}`, {
+    const response = await fetch(`https://mern-y1sz.onrender.com/delete/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -58,6 +61,11 @@ const handleDeleteService = async (id) => {
 
 
 
+ const navigate = useNavigate();
+
+  const handleCreate = () => {
+    navigate('/admin/servicepost'); // path should match your route
+  };
 
 
 
@@ -73,12 +81,16 @@ const handleDeleteService = async (id) => {
 
   return (
     <>
-      <h1 className="admin-title">Service Data</h1>
+      <div className="admin-header">
+  <h1 className="admin-title">Service Data</h1>
+  <button className="create-button" onClick={handleCreate}><MdAdd />Create Service</button>
+</div>
+
       <div>
              <ul>
  
 
-<div className="container mt-4">
+<div className="admin-service-container" >
   <div className="row">
     {data.map((service, index) => (
       <div className="col-md-4 mb-4" key={index}>
