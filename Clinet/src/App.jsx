@@ -20,12 +20,14 @@ import Footer from "./footer/Footer.jsx";
 import CreatePost from "./navigation/CreatePost.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AdminService from "./admin/AdminService.jsx";
+import Status from "./Status.jsx";
 
 function App() {
   return (
     <Router>
       <Navbar></Navbar>
       <Routes>
+        <Route path="/status" element={<Status/>}/>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
          <Route path="/service" element= {<Services/>} />
