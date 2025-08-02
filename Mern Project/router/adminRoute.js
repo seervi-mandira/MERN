@@ -3,7 +3,7 @@
  const router = express.Router();
 const UserMiddleware = require('../validator/User-middleware');
 const adminMiddleware = require('../validator/adminMiddleware');
- router.route('/user').get(UserMiddleware,adminMiddleware, getallusers);
+ router.route('/user').get(getallusers);
   router.route('/update/:id').get(updateUserById);
   router.route('/user/update/:id').patch(userUpdateByID);
   router.route('/delete/:id').delete(deleteuserid)
