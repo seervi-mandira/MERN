@@ -30,7 +30,7 @@ const adminRoute = require('./router/adminRoute')
 
 var corsOptions = {
   
-  origin: 'http://localhost:5173',
+  origin: 'https://seervi-mandira.github.io',
 
   credentials: true,
 
